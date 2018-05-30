@@ -14,7 +14,41 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         return $this->render('default/index.html.twig', [
-            'test' => 'test',
+            'test' => 'indexAction',
         ]);
     }
+
+    /**
+     * @Route("/extract-markets", name="extract-markets")
+     */
+    public function extractMarketsAction(Request $request)
+    {
+
+        return $this->render('default/index.html.twig', [
+            'test' => 'extractMarketsAction',
+        ]);
+    }
+
+    /**
+     * @Route("/extract-indexes", name="extract-indexes")
+     */
+    public function extractIndexesAction(Request $request)
+    {
+
+        return $this->render('default/index.html.twig', [
+            'test' => 'extractIndexesAction',
+        ]);
+    }
+
+    /**
+     * @Route("/send-xml", name="send-xml")
+     */
+    public function sendXmlAction(Request $request)
+    {
+
+        return $this->render('default/index.html.twig', [
+            'test' => 'sendXmlAction',
+        ]);
+    }
+
 }
